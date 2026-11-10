@@ -1,1 +1,2 @@
 # aws-devsecops-project
+Secure AWS infrastructure built with Terraform, deployed through a GitHub Actions pipeline that automatically scans for secrets, vulnerable dependencies, insecure infrastructure code, and container vulnerabilities.
