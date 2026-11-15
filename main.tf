@@ -12,7 +12,13 @@ resource "aws_s3_bucket" "Ankush_bucket" {
     Project     = "aws-devsecops-project"
   }
 
+  lifecycle {
+    prevent_destroy = true
+  }
 }
+
+
+
 resource "aws_s3_bucket_public_access_block" "Ankush_bucket" {
   bucket                  = aws_s3_bucket.Ankush_bucket.id
   block_public_acls       = true

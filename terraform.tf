@@ -11,11 +11,11 @@ terraform {
   required_version = ">= 1.10"
 
 
- backend "s3" {
-    bucket = "ankush-devsecops-tfstate-111"
-    key    = "aws-devsecops-project/terraform.tfstate"
-    region = "us-east-2"
-    profile = "devsecops-tf"
+  backend "s3" {
+    bucket       = "ankush-devsecops-tfstate-111"
+    key          = "aws-devsecops-project/terraform.tfstate"
+    region       = "us-east-2"
+    profile      = "devsecops-tf"
     encrypt      = true
     use_lockfile = true
   }
