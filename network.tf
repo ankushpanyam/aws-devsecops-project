@@ -9,6 +9,13 @@ resource "aws_vpc" "main_vpc" {
   enable_dns_hostnames = true
 }
 
+resource "aws_default_security_group" "default" {
+  vpc_id = aws_vpc.main_vpc.id
+
+  tags = {
+    Name = "Ankush_def_secgroup"
+  }
+}
 
 resource "aws_subnet" "public_a" {
   vpc_id     = aws_vpc.main_vpc.id
